@@ -1,8 +1,8 @@
 /* eslint-disable unicorn/error-message */
 import test from 'ava';
 import delay from 'delay';
-import PCancelable, {CancelError} from 'p-cancelable';
-import pAny from './index.js';
+import PCancelable, {CancelError} from '@esm2cjs/p-cancelable';
+import pAny from './esm/index.js';
 
 test('returns the first fulfilled value', async t => {
 	const fixture = [

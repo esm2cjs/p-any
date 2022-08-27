@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../esm/index.js"],
+  "sourcesContent": ["import pSome from '@esm2cjs/p-some';\nimport PCancelable from '@esm2cjs/p-cancelable';\n\nexport default function pAny(iterable, options) {\n\tconst anyCancelable = pSome(iterable, {...options, count: 1});\n\n\treturn PCancelable.fn(async onCancel => {\n\t\tonCancel(() => {\n\t\t\tanyCancelable.cancel();\n\t\t});\n\n\t\tconst [value] = await anyCancelable;\n\t\treturn value;\n\t})();\n}\n\nexport {AggregateError} from '@esm2cjs/p-some';\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oBAAkB;AAClB,0BAAwB;AAexB,IAAAA,iBAA6B;AAbd,SAAR,KAAsB,UAAU,SAAS;AAC/C,QAAM,oBAAgB,cAAAC,SAAM,UAAU,EAAC,GAAG,SAAS,OAAO,EAAC,CAAC;AAE5D,SAAO,oBAAAC,QAAY,GAAG,OAAM,aAAY;AACvC,aAAS,MAAM;AACd,oBAAc,OAAO;AAAA,IACtB,CAAC;AAED,UAAM,CAAC,KAAK,IAAI,MAAM;AACtB,WAAO;AAAA,EACR,CAAC,EAAE;AACJ;",
+  "names": ["import_p_some", "pSome", "PCancelable"]
+}

@@ -1,5 +1,5 @@
-import PCancelable from 'p-cancelable';
-import {Options as PSomeOptions} from 'p-some';
+import PCancelable from '@esm2cjs/p-cancelable';
+import {Options as PSomeOptions} from '@esm2cjs/p-some';
 
 export type Value<ValueType> = ValueType | PromiseLike<ValueType>;
 export type Options<ValueType> = Omit<PSomeOptions<ValueType>, 'count'>; // eslint-disable-line @typescript-eslint/ban-types
@@ -31,4 +31,4 @@ export default function pAny<ValueType>(
 	options?: Options<ValueType>
 ): CancelablePromise<ValueType>;
 
-export {AggregateError} from 'p-some';
+export {AggregateError} from '@esm2cjs/p-some';

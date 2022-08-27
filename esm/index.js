@@ -1,5 +1,5 @@
-import pSome from 'p-some';
-import PCancelable from 'p-cancelable';
+import pSome from '@esm2cjs/p-some';
+import PCancelable from '@esm2cjs/p-cancelable';
 
 export default function pAny(iterable, options) {
 	const anyCancelable = pSome(iterable, {...options, count: 1});
@@ -14,4 +14,4 @@ export default function pAny(iterable, options) {
 	})();
 }
 
-export {AggregateError} from 'p-some';
+export {AggregateError} from '@esm2cjs/p-some';
